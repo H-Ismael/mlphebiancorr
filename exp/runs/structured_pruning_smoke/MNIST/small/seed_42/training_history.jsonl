@@ -1,0 +1,1 @@
+{"dataset": "MNIST", "architecture": "small", "seed": 42, "epoch": 1, "train_loss": 0.32317360626902214, "train_accuracy": 0.9024318118563874, "validation_loss": 0.16241450333595275, "validation_accuracy": 0.9525, "test_loss": 0.1479943490087986, "test_accuracy": 0.9516, "epoch_time_seconds": 2.9679178190417588, "calibration_size": 512}

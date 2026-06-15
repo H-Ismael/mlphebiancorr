@@ -1,1 +1,4 @@
+*.pt
 venv_hebian/
+*.gz
+*ubyte

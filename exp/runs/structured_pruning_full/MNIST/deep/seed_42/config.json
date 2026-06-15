@@ -1,0 +1,88 @@
+{
+  "dataset_names": [
+    "MNIST",
+    "FashionMNIST",
+    "KMNIST"
+  ],
+  "architectures": [
+    "small",
+    "medium",
+    "deep"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 10,
+  "batch_size": 128,
+  "val_size": 10000,
+  "calibration_size": 2048,
+  "num_workers": 2,
+  "optimizer_name": "adam",
+  "learning_rate": 0.001,
+  "fine_tune_learning_rate": 0.0001,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "dropout": 0.2,
+  "activation_threshold": 0.0,
+  "pruning_percentages": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.7
+  ],
+  "fine_tune_epochs": [
+    0,
+    1,
+    3,
+    5
+  ],
+  "criteria": [
+    "random",
+    "output_weight_norm",
+    "mean_activation",
+    "firing_rate",
+    "activation_variance",
+    "class_selectivity",
+    "redundancy",
+    "hebbian",
+    "activation_fisher",
+    "weight_fisher"
+  ],
+  "random_trials": 5,
+  "prune_scopes": [
+    "all",
+    "layerwise"
+  ],
+  "scoring_epochs": [
+    "last"
+  ],
+  "stability_topk_ratios": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "calibration_sensitivity_sizes": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "calibration_sensitivity_criteria": [
+    "hebbian",
+    "activation_fisher"
+  ],
+  "weight_fisher_mode": "batch",
+  "weight_fisher_parts": "both",
+  "ablation_reference_metric": "loss",
+  "save_checkpoints": true,
+  "download": true,
+  "data_root": "data",
+  "run_root": "runs/structured_pruning_full",
+  "device": null,
+  "measure_compact_inference": true
+}

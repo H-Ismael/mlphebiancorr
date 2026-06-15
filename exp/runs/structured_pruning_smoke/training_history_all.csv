@@ -1,0 +1,2 @@
+dataset,architecture,seed,epoch,train_loss,train_accuracy,validation_accuracy,test_accuracy,validation_loss,test_loss,calibration_size,epoch_time_seconds
+MNIST,small,42,1,0.32317360626902214,0.9024318118563874,0.9525,0.9516,0.16241450333595275,0.1479943490087986,512,2.9679178190417588

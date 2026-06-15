@@ -1,0 +1,70 @@
+{
+  "dataset_names": [
+    "MNIST"
+  ],
+  "architectures": [
+    "small"
+  ],
+  "seeds": [
+    42
+  ],
+  "epochs": 1,
+  "batch_size": 128,
+  "val_size": 2000,
+  "calibration_size": 512,
+  "num_workers": 2,
+  "optimizer_name": "adam",
+  "learning_rate": 0.001,
+  "fine_tune_learning_rate": 0.0001,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "dropout": 0.2,
+  "activation_threshold": 0.0,
+  "pruning_percentages": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "fine_tune_epochs": [
+    0
+  ],
+  "criteria": [
+    "random",
+    "output_weight_norm",
+    "mean_activation",
+    "firing_rate",
+    "activation_variance",
+    "class_selectivity",
+    "redundancy",
+    "hebbian",
+    "activation_fisher",
+    "weight_fisher"
+  ],
+  "random_trials": 2,
+  "prune_scopes": [
+    "all",
+    "layerwise"
+  ],
+  "scoring_epochs": [
+    "last"
+  ],
+  "stability_topk_ratios": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "calibration_sensitivity_sizes": [],
+  "calibration_sensitivity_criteria": [
+    "hebbian",
+    "activation_fisher"
+  ],
+  "weight_fisher_mode": "batch",
+  "weight_fisher_parts": "both",
+  "ablation_reference_metric": "loss",
+  "save_checkpoints": true,
+  "download": true,
+  "data_root": "data",
+  "run_root": "runs/structured_pruning_smoke",
+  "device": null,
+  "measure_compact_inference": true
+}
